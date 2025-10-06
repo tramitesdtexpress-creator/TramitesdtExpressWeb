@@ -1,0 +1,338 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Open Sans', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+:root {
+  --turquesa: #00C9C8;
+  --turquesa-oscuro: #00a8a7;
+  --amarillo: #FFD700;
+  --light-bg: #f8fafc;
+  --text: #1e293b;
+  --gray: #64748b;
+}
+
+body {
+  background-color: #f1f5f9;
+  color: var(--text);
+  line-height: 1.6;
+}
+
+.hero {
+  background: linear-gradient(135deg, var(--turquesa), var(--turquesa-oscuro));
+  color: white;
+  padding: 4rem 2rem;
+  text-align: center;
+}
+
+.hero h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  font-weight: 800;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.hero p {
+  font-size: 1.2rem;
+  max-width: 700px;
+  margin: 0 auto 1.5rem;
+  opacity: 0.95;
+}
+
+.slogan {
+  background: rgba(255,255,255,0.15);
+  display: inline-block;
+  padding: 8px 20px;
+  border-radius: 30px;
+  margin-top: 1rem;
+  font-weight: 600;
+  backdrop-filter: blur(4px);
+  font-family: 'Montserrat', sans-serif;
+}
+
+.contador-tramites {
+  margin-top: 1.2rem;
+  font-size: 1.1rem;
+  font-weight: 600;
+  opacity: 0.9;
+}
+
+.contador-numero {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 800;
+  font-size: 1.4rem;
+  color: var(--amarillo);
+  display: inline-block;
+  min-width: 80px;
+}
+
+.logo {
+  font-size: 2.6rem;
+  font-weight: 800;
+  letter-spacing: -0.5px;
+  margin-bottom: 1.2rem;
+  font-family: 'Montserrat', sans-serif;
+}
+.logo span {
+  color: var(--amarillo);
+}
+
+.container {
+  max-width: 1100px;
+  margin: 2.5rem auto;
+  padding: 0 1.5rem;
+}
+
+.section-title {
+  text-align: center;
+  font-size: 2rem;
+  margin: 2.5rem 0 2rem;
+  color: var(--text);
+  font-family: 'Montserrat', sans-serif;
+}
+
+.servicios-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 25px;
+}
+
+.servicio-card {
+  background: white;
+  padding: 28px;
+  border-radius: 16px;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.08);
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.servicio-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.12);
+}
+
+.servicio-card h3 {
+  color: var(--turquesa);
+  margin-bottom: 12px;
+  font-size: 1.4rem;
+  font-family: 'Montserrat', sans-serif;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.servicio-card h3 i {
+  font-size: 1.3rem;
+}
+
+.servicio-card p:not(.servicio-detalles *) {
+  color: var(--text);
+  margin-bottom: 16px;
+}
+
+.servicio-detalles {
+  margin-top: 18px;
+  padding-top: 18px;
+  border-top: 1px dashed #e2e8f0;
+  display: none;
+  animation: fadeIn 0.4s ease;
+}
+
+.servicio-card.activo .servicio-detalles {
+  display: block;
+}
+
+.nota-provincia {
+  font-size: 0.85rem;
+  color: var(--gray);
+  font-style: italic;
+  margin-top: 10px;
+}
+
+.btn-whatsapp-servicio {
+  display: inline-block;
+  background-color: #25D366;
+  color: white;
+  padding: 8px 16px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-size: 0.95rem;
+  margin-top: 12px;
+  font-weight: 600;
+  transition: background 0.3s;
+}
+
+.btn-whatsapp-servicio:hover {
+  background-color: #128C7E;
+  color: white;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(15px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.btn-primary {
+  background: var(--amarillo);
+  color: var(--text);
+  border: none;
+  padding: 14px 32px;
+  border-radius: 12px;
+  font-weight: 700;
+  font-size: 1.1rem;
+  cursor: pointer;
+  font-family: 'Montserrat', sans-serif;
+  text-decoration: none;
+  display: inline-block;
+  margin-top: 1rem;
+  transition: all 0.3s;
+}
+
+.btn-primary:hover {
+  background: #e6c200;
+  transform: scale(1.03);
+}
+
+.proceso-section {
+  background: white;
+  padding: 35px;
+  border-radius: 18px;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.08);
+  margin-top: 2rem;
+}
+
+.pasos {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+  margin-top: 25px;
+}
+
+.paso {
+  text-align: center;
+  max-width: 200px;
+}
+
+.paso-numero {
+  width: 52px;
+  height: 52px;
+  background: var(--amarillo);
+  color: var(--text);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  margin: 0 auto 15px;
+  font-size: 1.4rem;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.contacto-section {
+  background: white;
+  padding: 35px;
+  border-radius: 18px;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.08);
+  margin-top: 2rem;
+}
+
+.contacto-contenido {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+}
+
+.info-contacto, .formulario {
+  flex: 1;
+  min-width: 280px;
+}
+
+.formulario input,
+.formulario select,
+.formulario textarea {
+  width: 100%;
+  padding: 12px;
+  margin: 10px 0;
+  border: 1px solid #cbd5e1;
+  border-radius: 12px;
+  font-family: 'Open Sans', sans-serif;
+}
+
+.formulario button {
+  background: var(--turquesa);
+  color: white;
+  border: none;
+  padding: 14px;
+  border-radius: 12px;
+  font-weight: 700;
+  cursor: pointer;
+  font-size: 1.1rem;
+  width: 100%;
+  max-width: 250px;
+  transition: background 0.3s;
+}
+
+.formulario button:hover {
+  background: var(--turquesa-oscuro);
+}
+
+footer {
+  text-align: center;
+  padding: 2rem;
+  color: var(--gray);
+  font-size: 0.95rem;
+  background: #f8fafc;
+  border-top: 1px solid #e2e8f0;
+  margin-top: 3rem;
+}
+
+.whatsapp-flotante {
+  position: fixed;
+  bottom: 25px;
+  right: 25px;
+  z-index: 1000;
+}
+
+.whatsapp-flotante a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 60px;
+  height: 60px;
+  background-color: #25D366;
+  color: white;
+  border-radius: 50%;
+  font-size: 28px;
+  text-decoration: none;
+  box-shadow: 0 4px 12px rgba(37, 211, 102, 0.4);
+  transition: all 0.3s ease;
+}
+
+.whatsapp-flotante a:hover {
+  transform: scale(1.1);
+  box-shadow: 0 6px 16px rgba(37, 211, 102, 0.6);
+}
+
+@media (max-width: 768px) {
+  .hero h1 { font-size: 2rem; }
+  .hero p { font-size: 1rem; }
+  .contador-numero { font-size: 1.25rem; }
+  .pasos, .contacto-contenido {
+    flex-direction: column;
+    align-items: center;
+  }
+  .btn-primary { padding: 12px 28px; }
+  .whatsapp-flotante {
+    bottom: 15px;
+    right: 15px;
+  }
+  .whatsapp-flotante a {
+    width: 55px;
+    height: 55px;
+    font-size: 24px;
+  }
+}
